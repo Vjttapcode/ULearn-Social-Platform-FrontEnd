@@ -1,0 +1,40 @@
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.profileContainer {
+  display: flex;
+  flex: 1;
+}
+
+.profileContent {
+  flex: 1;
+  padding: 20px;
+}
+
+.profile-page label {
+  margin-top: 10px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-page .form-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.profile-page textarea.form-input {
+  resize: none;
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,32 @@
+/* Home.css */
+
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container chứa Sidebar và phần nội dung chính */
+.home-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Phần nội dung chính sẽ chiếm phần còn lại bên phải */
+.main-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.main-content h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+/* Responsive cho màn hình di động */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+}
