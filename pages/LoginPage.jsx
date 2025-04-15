@@ -25,12 +25,7 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       localStorage.setItem("accessToken", response.token);
-      const user = await getCurrentUser();
-      if (user && user.userInfo) {
-        navigate("/home");
-      } else {
-        navigate("/completeprofile");
-      }
+      navigate('/home')
     } catch (error) {
       setErrorMessage(error.message || "Login failed!");
     }

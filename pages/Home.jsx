@@ -4,6 +4,7 @@ import Post from "../components/Post";
 import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
 import RightSidebar from "../components/RightSidebar";
+import { getCurrentUser } from "../services/getCurrentUser";
 
 const Home = () => {
   const username = "Admin"; // Thông tin tên người dùng có thể được lấy từ state hoặc context

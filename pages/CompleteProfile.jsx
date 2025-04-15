@@ -43,7 +43,7 @@ const CompleteProfile = () => {
       const userResponse = await postInfo(userInfo);
       setMessage("Successfully");
       localStorage.setItem("user", userInfo);
-      navigate("/home");
+      navigate("/signin");
     } catch (error) {
       setMessage(`There is an error occur: ${error.message}`);
     }

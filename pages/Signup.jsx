@@ -21,6 +21,7 @@ const Signup = () => {
     try {
       const response = await registerUser(formData);
       setMessage("Account registered successfully");
+      navigate('/completeprofile');
     } catch (error) {
       setErrorMessage(error.message || "Registration failed!");
     }
