@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 // Hàm xử lý đăng ký
 export const registerUser = async (formData) => {
   try {
     const response = await axios.post(`${API_BASE_URL}/auth/signup`, formData);
-    return response.data; // Trả về dữ liệu từ API
+    return response.data;
   } catch (error) {
-    throw error.response.data; // Trả về lỗi từ API
+    throw error.response.data;
   }
 };
 
@@ -19,8 +19,8 @@ export const loginUser = async (email, password) => {
       email,
       password,
     });
-    return response.data; // Trả về dữ liệu từ API (bao gồm token)
+    return response.data;
   } catch (error) {
-    throw error.response.data; // Trả về lỗi từ API
+    throw error.response.data;
   }
 };

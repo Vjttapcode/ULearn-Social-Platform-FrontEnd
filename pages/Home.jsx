@@ -1,8 +1,9 @@
 import React from "react";
 import Sidebar from "../components/Sidebar";
 import Post from "../components/Post";
-import "../styles/Home.css"; // File CSS để định dạng bố cục trang Home
+import "../styles/Home.css";
 import { useNavigate } from "react-router-dom";
+import RightSidebar from "../components/RightSidebar";
 
 const Home = () => {
   const username = "Admin"; // Thông tin tên người dùng có thể được lấy từ state hoặc context
@@ -27,7 +28,7 @@ const Home = () => {
       <div className="home-container">
         {/* Sidebar với thông tin người dùng và các đường dẫn chức năng */}
         <Sidebar username={username} onLogout={handleLogout} />
-
+        <RightSidebar />
         {/* Nội dung chính của trang Home */}
         <div className="main-content">
           <div>

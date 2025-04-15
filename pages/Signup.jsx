@@ -1,13 +1,14 @@
 import "../styles/SignIn.css";
 import { useState } from "react";
 import { registerUser } from "../services/authService";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
-
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 

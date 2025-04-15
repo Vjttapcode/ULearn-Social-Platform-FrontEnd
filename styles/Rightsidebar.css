@@ -1,0 +1,62 @@
+.right-sidebar {
+  width: 280px; /* Chiều rộng của sidebar bên phải */
+  background-color: #f8f9fa;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed; /* Giữ sidebar cố định bên phải */
+  top: 0;
+  right: 0;
+  height: 100vh;
+  overflow-y: auto; /* Hiển thị cuộn nếu nội dung vượt quá chiều cao */
+  border: solid rgba(23, 15, 15, 0.809);
+}
+
+.sidebar-section {
+  margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.sidebar-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-section ul li {
+  margin-bottom: 10px;
+}
+
+.doc-link {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.doc-link:hover {
+  text-decoration: underline;
+}
+
+/* Style cho phần người dùng online */
+.user-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 0.95em;
+  color: #555;
+}

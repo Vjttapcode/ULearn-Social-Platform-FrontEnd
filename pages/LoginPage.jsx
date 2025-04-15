@@ -3,6 +3,7 @@ import "../styles/SignIn.css";
 import { loginUser } from "../services/authService";
 import { useNavigate } from "react-router-dom";
 import Signup from "./Signup";
+import { getCurrentUser } from "../services/getCurrentUser";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,12 @@ const LoginPage = () => {
     try {
       const response = await loginUser(email, password);
       localStorage.setItem("accessToken", response.token);
-      navigate("/home");
+      const user = await getCurrentUser();
+      if (user && user.userInfo) {
+        navigate("/home");
+      } else {
+        navigate("/completeprofile");
+      }
     } catch (error) {
       setErrorMessage(error.message || "Login failed!");
     }
